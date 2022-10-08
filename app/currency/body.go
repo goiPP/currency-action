@@ -1,8 +1,8 @@
 package currency
 
 import (
-    "fmt"
-    "strconv"
+	"fmt"
+	"strconv"
 )
 
 type Detail struct {
@@ -22,14 +22,12 @@ type Body struct {
 
 func (b Body) getResponse() string {
 	return fmt.Sprintf("1 %s = %s %s", b.Response.FromCurrencyCode, b.Response.AskPrice, b.Response.ToCurrencyCode)
-	return fmt.Sprintf("1 %s = %s %s", b.Response.FromCurrencyCode, b.Response.AskPrice, b.Response.ToCurrencyCode)
 }
 
 func (d Detail) getRate() int {
-    intVar, err := strconv.Atoi(d.AskPrice)
-    if err != nil {
-        fmt.Println("Cannot convert string to int")
-    }
+	intVar, err := strconv.Atoi(d.AskPrice)
+	if err != nil {
+		fmt.Println("Cannot convert string to int")
+	}
 	return intVar
 }
-
