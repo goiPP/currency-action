@@ -8,6 +8,8 @@ jobs:
     steps:
       - name: Currency Convert
         uses: goiPP/currency-action@master
+        env:
+          API_KEY: ${{ secrets.API_KEY }}
         with:
           to_currency: EUR
           from_currency: THB

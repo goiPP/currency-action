@@ -8,6 +8,10 @@ inputs:
     description: Currency Code that you would like to convert from
     required: true
     default: 'EUR'
+  output:
+    description: "Output options: 1) response = return human-readable sentence 2) rate = to return only rate number"
+    required: false
+    default: 'response'
 
 runs:
   using: docker
