@@ -31,7 +31,6 @@ func callApi(to string, from string) {
 	req.Header.Add("X-RapidAPI-Host", "alpha-vantage.p.rapidapi.com")
 
 	res, err := restclient.Client.Do(req)
-	fmt.Print(req.URL)
 	defer res.Body.Close()
 	json.NewDecoder(res.Body).Decode(&apiResponse)
 }

@@ -19,5 +19,11 @@ func main() {
 	  githubactions.Fatalf("missing 'from_currency'")
 	}
 
-    fmt.Print(currency.ExchangeResponse(to_currency, from_currency))
+    output := action.GetInput("from_currency")
+    if output == "response" {
+        fmt.Printf(`::set-output name=response::%s`, currency.ExchangeResponse(to_currency, from_currency)))
+    } else {
+        fmt.Printf(`::set-output name=rate::%d`, currency.getRate(to_currency, from_currency)))
+    }
+
 }
