@@ -21,7 +21,7 @@ func main() {
 
     output := action.GetInput("output")
     if output == "response" {
-        action.infof(currency.ExchangeResponse(to_currency, from_currency)
+	    action.infof(currency.ExchangeResponse(to_currency, from_currency))
     } 
 
 }
