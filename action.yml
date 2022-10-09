@@ -1,0 +1,15 @@
+name: Currency Action
+inputs:
+  to_currency:
+    description: Currency Code that you would like to convert to
+    required: true
+    default: 'THB'
+  from_currency:
+    description: Currency Code that you would like to convert from
+    required: true
+    default: 'EUR'
+
+runs:
+  using: docker
+  image: Dockerfile
+  args:

@@ -2,10 +2,11 @@ package currency
 
 import (
 	"testing"
+
 	"gopkg.in/h2non/gock.v1"
 )
 
-func TestGetFixedValue(t *testing.T) {
+func TestExchangeRate(t *testing.T) {
 	defer gock.Off()
 
 	t.Setenv("API_KEY", "secret")

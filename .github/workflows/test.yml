@@ -1,0 +1,13 @@
+name: Test Currency action
+on: [push, workflow_dispatch]
+
+jobs:
+  my_job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Currency Convert
+        uses: goiPP/currency-action@master
+        with:
+          to_currency: EUR
+          from_currency: THB
