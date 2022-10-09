@@ -21,6 +21,7 @@ func main() {
 
     output := action.GetInput("output")
     if output == "response" {
+	    fmt.Print("now")
 	    action.Infof(currency.ExchangeResponse(to_currency, from_currency))
     } 
 
