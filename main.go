@@ -21,9 +21,7 @@ func main() {
 
     output := action.GetInput("output")
     if output == "response" {
-        fmt.Printf(`::set-output name=response::%s`, currency.ExchangeResponse(to_currency, from_currency))
-    } else {
-        fmt.Printf(`::set-output name=rate::%d`, currency.ExchangeRate(to_currency, from_currency))
-    }
+        action.infof(currency.ExchangeResponse(to_currency, from_currency)
+    } 
 
 }
